@@ -280,18 +280,23 @@ const openPhoneMenu = (b = false) => {
     cursor: pointer;
     border-radius: 8px;
     user-select: none;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     box-shadow:
-      4px 4px 8px var(--neumorphic-shadow-dark),
-      -4px -4px 8px var(--neumorphic-shadow-light);
+      4px 4px 12px var(--neumorphic-shadow-dark),
+      -4px -4px 12px var(--neumorphic-shadow-light);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .right-nav-button {
     margin: 0 2px;
     font-size: 14px;
     padding: 8px 8px;
+    min-width: 36px;
   }
 
   .icon-button {
@@ -299,9 +304,10 @@ const openPhoneMenu = (b = false) => {
   }
   .nav-button:hover {
     box-shadow:
-      6px 6px 12px var(--neumorphic-shadow-dark),
-      -6px -6px 12px var(--neumorphic-shadow-light);
+      6px 6px 16px var(--neumorphic-shadow-dark),
+      -6px -6px 16px var(--neumorphic-shadow-light);
     transform: translateY(-1px);
+    background: rgba(255, 255, 255, 0.25);
   }
 
   .nav-button:active {
@@ -309,13 +315,14 @@ const openPhoneMenu = (b = false) => {
       2px 2px 4px var(--neumorphic-shadow-dark),
       -2px -2px 4px var(--neumorphic-shadow-light);
     transform: translateY(0);
+    background: rgba(255, 255, 255, 0.15);
   }
 
   .nav-button-active {
     box-shadow:
       inset 4px 4px 8px var(--neumorphic-shadow-dark),
       inset -4px -4px 8px var(--neumorphic-shadow-light);
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.1);
   }
 
   .logo {

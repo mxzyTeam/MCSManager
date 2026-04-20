@@ -40,86 +40,95 @@ html {
 
 // 毛玻璃拟态设计
 .global-neumorphic-card {
-  border-radius: 12px;
-  background: var(--background-color);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.15);
   box-shadow:
-    8px 8px 16px var(--neumorphic-shadow-dark),
-    -8px -8px 16px var(--neumorphic-shadow-light);
+    8px 8px 24px var(--neumorphic-shadow-dark),
+    -8px -8px 24px var(--neumorphic-shadow-light);
   transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 
   &:hover {
     box-shadow:
-      12px 12px 24px var(--neumorphic-shadow-dark),
-      -12px -12px 24px var(--neumorphic-shadow-light);
+      12px 12px 32px var(--neumorphic-shadow-dark),
+      -12px -12px 32px var(--neumorphic-shadow-light);
     transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.2);
   }
 
   &:active {
     box-shadow:
-      4px 4px 8px var(--neumorphic-shadow-dark),
-      -4px -4px 8px var(--neumorphic-shadow-light);
+      4px 4px 12px var(--neumorphic-shadow-dark),
+      -4px -4px 12px var(--neumorphic-shadow-light);
     transform: translateY(0);
+    background: rgba(255, 255, 255, 0.1);
   }
 }
 
 // 毛玻璃拟态按钮
 .global-neumorphic-btn {
-  border-radius: 8px;
-  background: var(--background-color);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.15);
   box-shadow:
-    4px 4px 8px var(--neumorphic-shadow-dark),
-    -4px -4px 8px var(--neumorphic-shadow-light);
-  border: none;
-  padding: 10px 20px;
+    4px 4px 12px var(--neumorphic-shadow-dark),
+    -4px -4px 12px var(--neumorphic-shadow-light);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 24px;
   color: var(--text-color);
   font-weight: 500;
   transition: all 0.3s ease;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
   &:hover {
     box-shadow:
-      6px 6px 12px var(--neumorphic-shadow-dark),
-      -6px -6px 12px var(--neumorphic-shadow-light);
-    transform: translateY(-1px);
+      6px 6px 16px var(--neumorphic-shadow-dark),
+      -6px -6px 16px var(--neumorphic-shadow-light);
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.2);
   }
 
   &:active {
     box-shadow:
-      2px 2px 4px var(--neumorphic-shadow-dark),
-      -2px -2px 4px var(--neumorphic-shadow-light);
+      2px 2px 8px var(--neumorphic-shadow-dark),
+      -2px -2px 8px var(--neumorphic-shadow-light);
     transform: translateY(0);
+    background: rgba(255, 255, 255, 0.1);
   }
 }
 
 // 毛玻璃拟态输入框
 .global-neumorphic-input {
-  border-radius: 8px;
-  background: var(--background-color);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
   box-shadow:
-    inset 4px 4px 8px var(--neumorphic-shadow-dark),
-    inset -4px -4px 8px var(--neumorphic-shadow-light);
-  border: none;
-  padding: 10px 16px;
+    inset 4px 4px 12px var(--neumorphic-shadow-dark),
+    inset -4px -4px 12px var(--neumorphic-shadow-light);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 12px 20px;
   color: var(--text-color);
   outline: none;
   transition: all 0.3s ease;
 
   &:focus {
     box-shadow:
-      inset 6px 6px 12px var(--neumorphic-shadow-dark),
-      inset -6px -6px 12px var(--neumorphic-shadow-light);
+      inset 6px 6px 16px var(--neumorphic-shadow-dark),
+      inset -6px -6px 16px var(--neumorphic-shadow-light);
+    background: rgba(255, 255, 255, 0.15);
   }
 }
 
 // 毛玻璃背景
 .global-glass-bg {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
+  border-radius: 16px;
 }
 
 // 白色渐变背景

@@ -339,64 +339,86 @@ onMounted(async () => {
   margin: 0 auto;
   transition: all 0.4s;
   width: 100%;
-  background: var(--background-color);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   box-shadow:
-    8px 8px 16px var(--neumorphic-shadow-dark),
-    -8px -8px 16px var(--neumorphic-shadow-light);
+    12px 12px 32px var(--neumorphic-shadow-dark),
+    -12px -12px 32px var(--neumorphic-shadow-light);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
 
   .login-panel-body {
-    padding: 28px 24px;
+    padding: 32px 28px;
     min-height: 322px;
   }
 
   .account {
-    border-radius: 8px;
-    background: var(--background-color);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
     box-shadow:
-      inset 4px 4px 8px var(--neumorphic-shadow-dark),
-      inset -4px -4px 8px var(--neumorphic-shadow-light);
-    border: none;
-    padding: 10px 16px;
+      inset 4px 4px 12px var(--neumorphic-shadow-dark),
+      inset -4px -4px 12px var(--neumorphic-shadow-light);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 12px 20px;
     color: var(--text-color);
     outline: none;
     transition: all 0.3s ease;
+    width: 100%;
 
     &:focus {
       box-shadow:
-        inset 6px 6px 12px var(--neumorphic-shadow-dark),
-        inset -6px -6px 12px var(--neumorphic-shadow-light);
+        inset 6px 6px 16px var(--neumorphic-shadow-dark),
+        inset -6px -6px 16px var(--neumorphic-shadow-light);
+      background: rgba(255, 255, 255, 0.15);
     }
   }
 
   .ant-btn {
-    border-radius: 8px;
-    background: var(--background-color);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.15);
     box-shadow:
-      4px 4px 8px var(--neumorphic-shadow-dark),
-      -4px -4px 8px var(--neumorphic-shadow-light);
-    border: none;
+      4px 4px 12px var(--neumorphic-shadow-dark),
+      -4px -4px 12px var(--neumorphic-shadow-light);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     color: var(--text-color);
     transition: all 0.3s ease;
+    padding: 10px 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
     &:hover {
       box-shadow:
-        6px 6px 12px var(--neumorphic-shadow-dark),
-        -6px -6px 12px var(--neumorphic-shadow-light);
-      transform: translateY(-1px);
+        6px 6px 16px var(--neumorphic-shadow-dark),
+        -6px -6px 16px var(--neumorphic-shadow-light);
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.2);
     }
 
     &:active {
       box-shadow:
-        2px 2px 4px var(--neumorphic-shadow-dark),
-        -2px -2px 4px var(--neumorphic-shadow-light);
+        2px 2px 8px var(--neumorphic-shadow-dark),
+        -2px -2px 8px var(--neumorphic-shadow-light);
       transform: translateY(0);
+      background: rgba(255, 255, 255, 0.1);
     }
   }
 
   .ant-btn-primary {
     background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(245,245,245,0.1) 100%);
+  }
+
+  .flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .justify-end {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
 }
 
