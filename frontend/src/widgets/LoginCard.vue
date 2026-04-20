@@ -339,12 +339,64 @@ onMounted(async () => {
   margin: 0 auto;
   transition: all 0.4s;
   width: 100%;
-  // backdrop-filter: saturate(120%) blur(12px);
-  background-color: var(--login-panel-bg);
+  background: var(--background-color);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow:
+    8px 8px 16px var(--neumorphic-shadow-dark),
+    -8px -8px 16px var(--neumorphic-shadow-light);
 
   .login-panel-body {
     padding: 28px 24px;
     min-height: 322px;
+  }
+
+  .account {
+    border-radius: 8px;
+    background: var(--background-color);
+    box-shadow:
+      inset 4px 4px 8px var(--neumorphic-shadow-dark),
+      inset -4px -4px 8px var(--neumorphic-shadow-light);
+    border: none;
+    padding: 10px 16px;
+    color: var(--text-color);
+    outline: none;
+    transition: all 0.3s ease;
+
+    &:focus {
+      box-shadow:
+        inset 6px 6px 12px var(--neumorphic-shadow-dark),
+        inset -6px -6px 12px var(--neumorphic-shadow-light);
+    }
+  }
+
+  .ant-btn {
+    border-radius: 8px;
+    background: var(--background-color);
+    box-shadow:
+      4px 4px 8px var(--neumorphic-shadow-dark),
+      -4px -4px 8px var(--neumorphic-shadow-light);
+    border: none;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+
+    &:hover {
+      box-shadow:
+        6px 6px 12px var(--neumorphic-shadow-dark),
+        -6px -6px 12px var(--neumorphic-shadow-light);
+      transform: translateY(-1px);
+    }
+
+    &:active {
+      box-shadow:
+        2px 2px 4px var(--neumorphic-shadow-dark),
+        -2px -2px 4px var(--neumorphic-shadow-light);
+      transform: translateY(0);
+    }
+  }
+
+  .ant-btn-primary {
+    background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(245,245,245,0.1) 100%);
   }
 }
 

@@ -19,7 +19,7 @@ const { containerState } = useLayoutContainerStore();
   <div
     :class="{
       'card-panel': true,
-      'global-card-container-shadow': true,
+      'global-neumorphic-card': true,
       'h-100': props.fullHeight,
       padding: props.padding
     }"

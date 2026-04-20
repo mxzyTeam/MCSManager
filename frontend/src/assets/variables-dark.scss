@@ -31,6 +31,10 @@
 
   --inner-card-hover-bg: linear-gradient(135deg, #2e2e2e 0%, #222 100%);
 
+  // 拟态设计阴影
+  --neumorphic-shadow-dark: rgba(0, 0, 0, 0.4);
+  --neumorphic-shadow-light: rgba(255, 255, 255, 0.05);
+
   .app-header-wrapper {
     border-bottom: 1px solid var(--color-gray-5);
   }
@@ -47,7 +51,13 @@
 
   .ant-modal-content {
     border: 1px solid var(--color-gray-5);
-    border-radius: 8px;
+    border-radius: 12px;
+    background: var(--background-color);
+    box-shadow:
+      8px 8px 16px var(--neumorphic-shadow-dark),
+      -8px -8px 16px var(--neumorphic-shadow-light);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
   .ant-tag-purple {
     border: 1px solid var(--color-purple-5) !important;

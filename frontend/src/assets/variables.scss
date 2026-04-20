@@ -26,6 +26,10 @@
   --card-bottom-background-color: rgba(12, 12, 12, 0.6);
 
   --inner-card-hover-bg: linear-gradient(135deg, #e8e8e8 0%, #d4d4d4 100%);
+
+  // 拟态设计阴影
+  --neumorphic-shadow-dark: rgba(0, 0, 0, 0.1);
+  --neumorphic-shadow-light: rgba(255, 255, 255, 0.7);
 }
 
 .app-light-base-color {

@@ -272,14 +272,20 @@ const openPhoneMenu = (b = false) => {
   .nav-button {
     margin: 0 4px;
     font-size: 14px;
-    transition: all 0.4s;
+    transition: all 0.3s ease;
     color: var(--app-header-text-color) !important;
     text-align: center;
     padding: 8px 12px;
     min-width: 40px;
     cursor: pointer;
-    border-radius: 6px;
+    border-radius: 8px;
     user-select: none;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow:
+      4px 4px 8px var(--neumorphic-shadow-dark),
+      -4px -4px 8px var(--neumorphic-shadow-light);
   }
 
   .right-nav-button {
@@ -292,11 +298,24 @@ const openPhoneMenu = (b = false) => {
     font-size: 16px !important;
   }
   .nav-button:hover {
-    background-color: rgba(215, 215, 215, 0.261);
+    box-shadow:
+      6px 6px 12px var(--neumorphic-shadow-dark),
+      -6px -6px 12px var(--neumorphic-shadow-light);
+    transform: translateY(-1px);
+  }
+
+  .nav-button:active {
+    box-shadow:
+      2px 2px 4px var(--neumorphic-shadow-dark),
+      -2px -2px 4px var(--neumorphic-shadow-light);
+    transform: translateY(0);
   }
 
   .nav-button-active {
-    background-color: rgba(215, 215, 215, 0.35);
+    box-shadow:
+      inset 4px 4px 8px var(--neumorphic-shadow-dark),
+      inset -4px -4px 8px var(--neumorphic-shadow-light);
+    background: rgba(255, 255, 255, 0.05);
   }
 
   .logo {
