@@ -135,8 +135,13 @@ const onAppDropdownClick = (item: SidebarAppDropdownEntry, info: { key: Key }) =
   flex-direction: column;
   flex: 0 0 240px;
   text-align: left;
-  border-right: 1px solid var(--color-gray-5);
-  background-image: url("@/assets/side.png");
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow:
+    8px 0 16px var(--neumorphic-shadow-dark),
+    -8px 0 16px var(--neumorphic-shadow-light);
   padding: 20px 12px;
   transition: all 0.3s ease;
   background-position-x: -80px;
@@ -147,7 +152,7 @@ const onAppDropdownClick = (item: SidebarAppDropdownEntry, info: { key: Key }) =
   flex-direction: column;
   align-items: flex-start;
   padding: 8px;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--text-color);
   flex: 1;
   gap: 8px;
   width: 100%;
@@ -162,16 +167,28 @@ const onAppDropdownClick = (item: SidebarAppDropdownEntry, info: { key: Key }) =
   color: inherit;
   text-decoration: none;
   cursor: pointer;
-  border-radius: 6px;
-  transition: all 0.4s ease;
+  border-radius: 10px;
+  transition: all 0.3s ease;
   width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow:
+    4px 4px 8px var(--neumorphic-shadow-dark),
+    -4px -4px 8px var(--neumorphic-shadow-light);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.178);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow:
+      6px 6px 12px var(--neumorphic-shadow-dark),
+      -6px -6px 12px var(--neumorphic-shadow-light);
+    transform: translateX(2px);
   }
 
   &.sidebar-item-active {
-    background-color: rgba(255, 255, 255, 0.22);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow:
+      inset 4px 4px 8px var(--neumorphic-shadow-dark),
+      inset -4px -4px 8px var(--neumorphic-shadow-light);
   }
 
   .sidebar-item-icon {
